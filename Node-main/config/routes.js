@@ -18,7 +18,13 @@ let equipes = [
     {'2':{ Nome: 'equipe 2', Membros: 'Array', Projetos: 'pro'} },
     {'3':{ Nome: 'equipe 3', Membros: 'Array', Projetos: 'pro'} }
 ]
-//PUT -> modificar
+routes.put('/:id', (req,res) =>{
+    const id = req.params
+    const Nome = req.body
+    pessoas[id] = Nome
+    
+    return res.json(pessoas)
+     })
 
 //GET -> selecionar
 routes.get('/', (req, res) => {
