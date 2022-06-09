@@ -19,7 +19,7 @@ let equipes = [
     {'3':{ Nome: 'equipe 3', Membros: 'Array', Projetos: 'pro'} }
 ]
 routes.put('/:id', (req,res) =>{
-    const id = req.params
+    const id = req.params.id
     const Nome = req.body
     pessoas[id] = Nome
     
